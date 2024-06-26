@@ -1,13 +1,13 @@
 # COVID_19
-A Look at Covid 19 cases in Brazil
+A Look at Covid 19 cases in United States of America
 
 
 ### PROJECT OVERVIEW
-This project looks at Covid 19 statistics in Brazil from January 2024 to May 2024. A lot of sql queries were done to explore and understand the data. 
+This project looks at Covid 19 statistics in USA from January 2024 to May 2024. A lot of sql queries were done to explore and understand the data. 
 
 
 ### DATA SOURCE
-This data is gotten from "Covid_19 Brazil" file 
+This data is gotten from "Covid_19_US" file 
 
 
 ### TOOLS
@@ -16,7 +16,8 @@ This data is gotten from "Covid_19 Brazil" file
 
 ### UNDERSTANDING THE DATA STRUCTURE
 
-![Screenshot 2024-05-25 192723](https://github.com/NStanley0524/Covid_19-SQL/assets/169830658/fcd0bff3-8c5c-4040-9873-23bb11fdce81)
+
+![Screenshot 2024-06-26 005354](https://github.com/NStanley0524/Covid_19-SQL/assets/169830658/2d6b93c5-06e9-47d9-b17f-8e56bda56de6)
 
 
 This data is made up of 4 **Columns** and 18 **Rows**. The columns are thus:
@@ -35,7 +36,7 @@ SQL queries were used on this dataset inorder to answer a lot of business questi
 To understand the dataset, i pulled out all the records with the code below
 
 ```sql
-SELECT * FROM COVID19_BRAZIL;
+SELECT * FROM covid19_usa;
 ```
 
 
@@ -52,7 +53,7 @@ The following query was used:
 SELECT DISTINCT
     (MONTHNAME(date)) AS Month, SUM(cases) AS 'Total cases'
 FROM
-    covid19_brazil
+    covid19_usa
 GROUP BY MONTHNAME(date)
 ORDER BY SUM(cases) DESC;
 ```
@@ -71,7 +72,7 @@ The following query was used:
 SELECT DISTINCT
     (MONTHNAME(date)) AS Month, SUM(deaths) AS 'Total deaths'
 FROM
-    covid19_brazil
+    covid19_usa
 GROUP BY MONTHNAME(date)
 ORDER BY SUM(deaths) DESC;
 ```
@@ -93,7 +94,7 @@ SELECT DISTINCT
     SUM(Deaths) AS Death,
     (SUM(deaths) / SUM(cases)) * 100 AS 'Death Percentage'
 FROM
-    covid19_brazil
+    covid19_usa
 GROUP BY MONTHNAME(date);
 ```
 
@@ -109,7 +110,7 @@ From this query, it can be seen that **April** has the highest percentage of dea
 SELECT 
     date, cases, deaths, (cases - deaths) AS 'Survived'
 FROM
-    covid19_brazil;
+    covid19_usa;
 ```
 
 
@@ -130,7 +131,7 @@ SELECT
     (deaths / cases) * 100 AS 'percentage Death',
     ((cases - deaths) / cases) * 100 AS 'Percentage Survived'
 FROM
-    covid19_brazil;
+    covid19_usa;
 ```
 
 
@@ -149,7 +150,7 @@ SELECT DISTINCT
     (SUM(deaths) / SUM(cases)) * 100 AS 'Death Percentage',
     (SUM(cases - deaths) / SUM(cases)) * 100 AS 'Percentage Survived'
 FROM
-    covid19_brazil
+    covid19_usa
 GROUP BY MONTHNAME(date);
 ```
 
