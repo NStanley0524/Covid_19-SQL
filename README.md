@@ -31,7 +31,7 @@ This data is made up of 4 **Columns** and 18 **Rows**. The columns are thus:
 **Deaths**: This represents the number of deaths from each case
 
 ### DATA EXPLORATION
-SQL queries were used on this dataset inorder to answer a lot of business questions. To get the full code, [Click here](https://github.com/NStanley0524/Covid_19-SQL/blob/main/Covid%20sql.sql).
+SQL queries were used on this dataset inorder to answer a lot of business questions. To get the full code, [Click here](https://github.com/NStanley0524/Covid_19-SQL/blob/main/Covid%20sql%20USA.sql).
 
 To understand the dataset, i pulled out all the records with the code below
 
