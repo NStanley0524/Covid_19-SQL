@@ -3,7 +3,12 @@ A Look at Covid 19 cases in United States of America
 
 
 ### PROJECT OVERVIEW
-This project looks at Covid 19 statistics in USA from January 2024 to May 2024. A lot of sql queries were done to explore and understand the data. 
+This project looks at Covid 19 statistics in USA from January 2024 to May 2024. A lot of sql queries were done to explore and understand the data.
+
+
+### AIMS AND OBJECTIVES
+- This project is aimed at understanding the various uses of SQL to solve business questions
+- Using SQL to explore data to derve useful insights
 
 
 ### DATA SOURCE
